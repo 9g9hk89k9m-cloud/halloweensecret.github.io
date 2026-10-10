@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Halloween Secret - Enigma 1</title>
+    <style>
+        body {
+            background-color: #0b0b0b;
+            color: #ff5500;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding-top: 100px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 15px;
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #ff5500;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ENIGMA I</h1>
+    <p>Nasco senza corpo, cresco con la luce, ma muoio nell'oscurità totale. Cosa sono?</p>
+
+    <input type="text" id="risposta" placeholder="Scrivi la risposta...">
+    <br>
+    <button onclick="verificaRisposta()">Invia</button>
+
+    <p id="messaggio" style="color: red;"></p>
+
+    <script>
+        function verificaRisposta() {
+            var input = document.getElementById("risposta").value.toLowerCase().trim();
+            // La risposta corretta è "ombra"
+            if (input === "ombra") {
+                alert("Esatto! Si va avanti...");
+                // Qui metteremo il collegamento alla seconda pagina quando la creiamo
+            } else {
+                document.getElementById("messaggio").innerText = "Risposta errata... Riprova.";
+            }
+        }
+    </script>
+
+</body>
+</html>
